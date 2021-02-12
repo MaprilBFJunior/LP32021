@@ -7,7 +7,7 @@ public class TestaPessoa {
 		Pessoa outro;
 
 		// Inicialização dos objetos;
-		eu = new Pessoa("Rafael"); // Chamada ao construtor
+		eu = new Pessoa("Mapril JUnior"); // Chamada ao construtor
 		outro = new Pessoa();
 
 		outro.dáNome("Alguém");
