@@ -8,20 +8,24 @@ public class Pessoa {
 	// Implemenando o encapsulamento: atributos de um objeto só são visível
 	// e modificáveis para a própria classe
 	private String nome;
+	private String cpf;
 
 	// Construtor
 	public Pessoa() {
 		this.nome = "Ninguém";
+		this.cpf = "00000000000";
 	}
 
 	// Construtor com argumento
-	public Pessoa(String nome) {
+	public Pessoa(String nome, String cpf ){
+	//public Pessoa(String nome) {
 		this.nome = nome;
+		this.cpf = cpf;
 	}
 
 	// Método que dá um comportamento
 	public void dizNome() {
-		System.out.printf("Oi, eu sou %s!\n", this.nome);
+		System.out.printf("Nome: " + this.nome);
 	}
 
 	public String pegaNome() {
@@ -30,5 +34,17 @@ public class Pessoa {
 
 	public void dáNome(String nome) {
 		this.nome = nome;
+	}
+
+	public void dizCpf() {
+		System.out.printf("Cpf: " + this.nome);
+	}
+
+	public String pegaCpf() {
+		return this.cpf;
+	}
+
+	public void dáCpf(String cpf) {
+		this.cpf = cpf;
 	}
 }

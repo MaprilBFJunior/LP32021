@@ -7,11 +7,19 @@ public class ContaBancaria{
 	private float saldo;
 	private Pessoa cliente;
 	
+	public ContaBancaria() {
+		this.conta = -1;
+		this.saldo = 0.0F;
+		this.cliente =  new Pessoa();
+	}
+
 	public ContaBancaria(int conta, float saldo, Pessoa cliente) {
 		this.conta = conta;
 		this.saldo = saldo;
 		this.cliente = cliente;
 	}
+
+	
 
 	private void modificaSaldo(){
 		System.out.println("Digite o novo saldo do cliente:");
@@ -23,12 +31,12 @@ public class ContaBancaria{
 		return retorno;
 	}
 
-	private void imprimeConta(){
-		System.out.printf("Conta: " + conta);
-		System.out.printf("Cliente: " + cliente.pegaNome());
-		System.out.printf("Saldo em conta: " + saldo);
+	public void imprimeConta(){
+		System.out.println("Conta: " + conta);
+		System.out.println("Cliente: " + cliente.pegaNome());
+		System.out.println("CPF: " + cliente.pegaCpf());
+		System.out.println("Saldo em conta: " + saldo);
 
 	}
 
-	
 }
